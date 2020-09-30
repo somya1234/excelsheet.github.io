@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+    height: 42px;
+    display: flex;
+    width: 100vw;
+    border: 1px solid;
+    align-items: center;
+    border-radius: 2px;
+    background-color: #109a9e;
+}
+.menu-options{
+    width: 60px;
+    padding: 2px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 10px;
+    height: 80%;
+    align-items: center;
+    color: whitesmoke;
+    padding-top: 5px;
+}
+/********************************************************************************************/
+.sub-menu{
+    height: 60px;
+    background-color: #f1f1f3;
+}
+.sub-menu-options{
+    margin-left: 20px;
+    display: none;
+}
+.sub-menu-options.selected{
+    display: flex;
+}
+
+.file-menu-option{
+    border: 2px solid black;
+    text-align: center;
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 5px;
+    height: 25px;
+}
+#Save{
+    width: 150px;
+}
+.style-block{
+    position: relative;
+    top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px solid;
+}
+#font-family{
+    height: 30px;
+    width: 90px;
+}
+
+#font-size-list{
+    height: 30px;
+    width: 50px;
+    top:  0px;
+}
+#bold{
+    font-weight: bolder;
+    font-size: 16px;
+}
+#italic{
+    font-style: italic;
+    font-size: 16px;
+}
+#underline{
+    text-decoration: underline;
+    font-size: 16px;
+}
+.color-btn{
+    height: 30px;
+    width: 30px;
+}
+.style-btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 0px 3px;
+}
+.style-btn.active{
+    background-color: #95a9b5;
+}
+
+.edit-option{
+    border: 2px solid black;
+    text-align: center;
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 5px;
+    height: 25px;
+} 
+/***********************************************************************************/
+.formula-bar{
+    height: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.address-container{
+    width: 21%;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 3px;
+}
+.formula-symbol{
+    width: 5%;
+    border: 2px solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+.formula-container{
+    width: 73%;
+    border: solid 2px black;
+    border-radius: 3px;
+}
+
+/**************************************************************************************/
+.grid{
+    height: calc(100vh - 147px);
+    overflow: scroll;
+    position: relative;
+}
+.top-row{
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    z-index: 1;
+}
+.top-row>.cell{
+    min-width: 80px;
+    min-height: 25px;
+    border: 1px solid gray;
+    text-align: center;
+    background-color: #f2f5f7;
+}
+.top-left-box{
+    width: 40px;
+    min-height: 25px;
+    border: 1px solid ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #95a9b5 ;
+    z-index: 2;
+}
+.left-col{
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    z-index: 1;
+}
+.left-col>.cell{
+    width: 40px;
+    min-height: 25px;
+    border: 1px solid;
+    text-align: center;
+    background-color: #f2f5f7;
+}
+.row{
+    display: flex;
+}
+.row>.cell{
+    min-width:  80px;
+    min-height: 25px;
+    border: 1px solid gray;
+    text-align: center;
+    max-width: 80px;
+}
+.cell-container{
+    position: absolute;
+    top: 25px;
+    left: 40px;
+}
+.cell.active{
+    background-color: #95a9b5;
+}
+
+/*******************************************************************************************/
+
+.sheets{
+    height: 20px;
+    background-color: cadetblue;
+    /* display: flex; */
+}
+/* .add-sheet{
+    margin-left: 20px;
+    margin-top: 1px;
+    background-color: cadetblue;
+} */

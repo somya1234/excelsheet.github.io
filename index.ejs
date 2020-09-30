@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="menu">
+        <!-- always remember id is unique and class can be used for many elements. -->
+        <div id="New" class="menu-options">New</div>
+        <div id="file" class="menu-options">File</div>
+        <div id="edit" class="menu-options">Edit</div>
+        <div id="home" class="menu-options">Home</div>
+        <div id="format" class="menu-options">Format</div>
+        <div id="help" class="menu-options">Help</div>
+    </div>
+
+    <div class="sub-menu">
+        <div class="file-options sub-menu-options">
+            <div id="Open" class="file-menu-option">Open</div>
+            <input id="Save" class="file-menu-option" type="file">  
+        </div>
+        <div class="edit-options sub-menu-options">
+            <div class="cut edit-option">Cut</div>
+            <div class="copy edit-option">Copy</div>
+            <div class="paste edit-option">Paste</div>
+        </div>
+
+        <div class="home-options sub-menu-options">
+            <div id="block1" class="style-block" >
+                <select name="" id="font-family"> 
+                    <option value="Chilanka">Chilanka</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Liberation Sans Narrow">Liberation Sans Narrow</option>
+                    <option value="Purisa">Purisa </option>
+                    <option value="Tlwg Typist">Tlwg Typist</option>
+                    <option value="Cambria">Cambria</option>
+                    <option value="monospace">monospace</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Gill Sans">Gill Sans</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="Arial">Arial</option>
+                </select>
+                <input list="font-size" id="font-size-list" type="text" placeholder="14">
+                <datalist id="font-size">
+                    <option value="12">
+                    <option value="16">
+                    <option value="20">
+                    <option value="26">
+                    <option value="32">
+                </datalist>
+            </div>
+            <div id="block2" class="style-block">
+                <input type="button" value="B" id="bold" class="style-btn">
+                <input type="button" value="I" id="italic" class="style-btn">
+                <input type="button" value="U" id="underline" class="style-btn">
+            </div>
+            <div id="block3" class="style-block">
+                <input type="color" value="red" id="font-color" class="color-btn">
+                <input type="color" value="yellow" id="bg-color" class="color-btn">
+            </div>
+            <div id="block4" class="style-block">
+                <input type="image" src="src/left.png" id="left" class="style-btn">
+                <input type="image" src="src/center2.png" id="center" class="style-btn">
+                <input type="image" src="src/right2.png" id="right" class="style-btn">
+            </div>
+            <div id="block5" class="style-block">
+                <input type="image" src="src/cut5.png" class="cut style-btn">
+                <input type="image" src="src/copy5.png" class="copy style-btn">
+                <input type="image" src="src/paste5.png" class="paste style-btn">
+                <!-- <input type="button" value="V" class="paste style-btn"> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="formula-bar">
+        <input class="address-container"/>
+        <div class="formula-symbol">&#402; </div>
+        <input class="formula-container">
+    </div>
+
+    <div class="grid">
+        <div class="top-row">
+            <% for(let i=0;i<cols;i++) { %>
+                <div class="cell">
+                    <%= String.fromCharCode(i+65) %>
+                </div>
+            <% } %>
+        </div>
+        <div class="top-left-box"></div>
+        <div class="left-col">
+            <% for(let i=0;i<rows;i++) { %>
+                <div class="cell">
+                    <%= i+1 %>
+                </div>
+            <% } %>
+        </div>
+        <div class="cell-container">
+            <% for(let i=0;i<rows;i++) { %>
+                <div class="row">
+                    <% for(let j=0;j<cols;j++) { %>
+                        <div class="cell" contenteditable="true" row-id="<%=i%>" col-id="<%=j%>" >
+                            
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="sheets">Sheets
+        <!-- <div class="add-sheet">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
